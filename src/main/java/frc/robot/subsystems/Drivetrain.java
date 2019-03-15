@@ -54,6 +54,6 @@ public class Drivetrain extends Subsystem {
 
   //takes parameters and and calls arcadeDrive with our differentailDrive
   public void arcadeDrive(double moveSpeed,double rotateSpeed){
-    differentailDrive.arcadeDrive(Math.pow(moveSpeed, 3),Math.pow(rotateSpeed, 3));
+    differentailDrive.arcadeDrive(moveSpeed,rotateSpeed);
   }
 }

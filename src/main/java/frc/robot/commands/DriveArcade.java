@@ -28,12 +28,8 @@ public class DriveArcade extends Command {
   @Override
   protected void execute() {
     double moveSpeed = -Robot.m_oi.driverController.getRawAxis(RobotMap.Driver_CONTROLLER_MOVE_AXIS);
-    //
-    double rotateSpeed = Robot.m_oi.driverController.getRawAxis(RobotMap.Driver_CONTROLLER_ROTATE_AXIS);
-    if(Robot.m_oi.driverController.getRawButton(6)){
-      moveSpeed *= .8;
-      rotateSpeed *= .9;
-    }
+    double rotateSpeed = Robot.m_oi.driverController.getTwist();
+
     Robot.m_drivetrain.arcadeDrive(moveSpeed, rotateSpeed);
   }
 

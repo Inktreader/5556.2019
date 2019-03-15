@@ -25,8 +25,8 @@ public class RobotMap {
   
   //here is where the ports for things are assigned
 	public static final int OI_DRIVER_CONTROLLER = 0;
-	public static final int Driver_CONTROLLER_ROTATE_AXIS = 4;
-  public static final int Driver_CONTROLLER_MOVE_AXIS = 5;
+	public static final int Driver_CONTROLLER_ROTATE_AXIS = 0;
+  public static final int Driver_CONTROLLER_MOVE_AXIS = 1;
 
   
   
@@ -37,9 +37,8 @@ public class RobotMap {
   public static final int SHOOTERTWO_PITCH_SOLINIOD_DEPLOY = 2;
   public static final int SHOOTERTWO_PITCH_SOLINOID_RETRACT = 3;
   
-  //ghost does not exist
   public static final int GHOST_TALON = 6;
-  public static final int MOVE_SPEED_FOR_LIFT = 1;
+  public static final int MOVE_SPEED_FOR_LIFT = 2;
 
   public static final int LIFT_MOTOR = 2;
   public static final int LIFT_JOYSTICK = 1;

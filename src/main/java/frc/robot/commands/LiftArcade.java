@@ -45,8 +45,8 @@ public class LiftArcade extends Command {
   protected void execute() {
 
     //double MoveSpeed = -Robot.m_oi.liftJoystick.getRawAxis(RobotMap.LIFT_JOYSTICK);
-    double RotateSpeed = Robot.m_oi.driverController.getRawAxis(RobotMap.GHOST_TALON);
-    double MoveSpeedPre = -Robot.m_oi.driverController.getRawAxis(RobotMap.LIFT_JOYSTICK);
+    double RotateSpeed = Robot.m_oi.liftJoystick.getTwist();
+    double MoveSpeedPre = -Robot.m_oi.liftJoystick.getRawAxis(RobotMap.LIFT_JOYSTICK);
     // put if/then here
     boolean isrevLimitSwitch = reverseLimitSwitch.get();
     boolean isforLimitSwitch = forwardLimitSwitch.get();

@@ -36,7 +36,6 @@ public class OI {
   public Joystick driverController = new Joystick(RobotMap.OI_DRIVER_CONTROLLER);
 
   //declares joystick buttons
-  
   Button D1 = new JoystickButton(driverController, 1);
   Button D2 = new JoystickButton(driverController, 2);
   Button D3 = new JoystickButton(driverController, 3);
@@ -56,11 +55,11 @@ public OI(){
   
   
 
-  D4.whenPressed(new ShooterUp());
+  D5.whenPressed(new ShooterUp());
   D3.whenPressed(new ShooterDown());
 
-  D1.whenPressed(new ShooterUpTwo());
-  D2.whenPressed(new ShooterDownTwo());
+  D6.whenPressed(new ShooterUpTwo());
+  D4.whenPressed(new ShooterDownTwo());
 
   D7.whenPressed(new LiftDownFast());
   D7.whenReleased(new LiftNeutral());
@@ -74,6 +73,11 @@ public OI(){
   D10.whenPressed(new LiftUp());
   D10.whenReleased(new LiftNeutral());
 
+  D11.whenPressed(new LiftDownSlow());
+  D11.whenPressed(new LiftNeutral());
+
+  D12.whenPressed(new LiftUpSlow());
+  D12.whenPressed(new LiftNeutral());
 
   
 }

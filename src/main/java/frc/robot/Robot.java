@@ -50,7 +50,7 @@ public class Robot extends TimedRobot {
 
   public static byte[] data = new byte[1];
   public static SerialPort serialPort = new SerialPort(9600, SerialPort.Port.kMXP);
-  private static int donce = 0;
+   private static int donce = 0;
 
   // cameras
   UsbCamera cameraOne = CameraServer.getInstance().startAutomaticCapture();
@@ -78,18 +78,19 @@ public class Robot extends TimedRobot {
 
     m_oi = new OI();
 
-    while (!DriverStation.getInstance().isDSAttached()) {
+    while(!DriverStation.getInstance().isDSAttached()){
       continue;
     }
-    if (DriverStation.getInstance().getAlliance() == DriverStation.Alliance.Red) {
+    if( DriverStation.getInstance().getAlliance() == DriverStation.Alliance.Red){
       data[0] = 1;
       serialPort.write(data, 1);
       System.out.println("red");
-    } else {
+    }else{
       data[0] = 2;
       serialPort.write(data, 1);
-      System.out.println("blue");
+     System.out.println("blue");
     }
+
 
   }
 
@@ -104,6 +105,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+
   }
 
   /**
